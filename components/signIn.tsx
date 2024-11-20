@@ -1,11 +1,11 @@
-import resendLogin from '@/actions/resend-login';
+import appSignIn from '@/actions/signin';
 
 export default function SignIn() {
   return (
     <form
       action={async (formData) => {
         'use server';
-        await resendLogin(formData);
+        await appSignIn(formData);
       }}
     >
       <label>
